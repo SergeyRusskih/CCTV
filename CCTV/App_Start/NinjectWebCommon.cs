@@ -11,6 +11,9 @@ namespace CCTV.App_Start
     using Ninject;
     using Ninject.Web.Common;
 
+    using Domain.Abstract;
+    using Domain.Imitations;
+
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -61,6 +64,7 @@ namespace CCTV.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IMainMenu>().To<MainMenuImitation>();
         }        
     }
 }
