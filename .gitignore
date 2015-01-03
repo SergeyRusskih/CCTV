@@ -3,6 +3,7 @@ doc/
 *.swp
 *~
 *.suo
+*v12.suo
 bin
 obj
 

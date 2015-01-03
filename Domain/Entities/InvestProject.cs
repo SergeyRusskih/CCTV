@@ -5,12 +5,11 @@ using System.Web;
 
 namespace Domain.Entities
 {
-    public class MenuItem
+    public class InvestProject
     {
         public int Id { get; set; }
+        public int CamId { get; set; }
+        public string Title { get; set; }
         public string Name { get; set; }
-        public int? ParentId { get; set; }
-        public bool CurrentPage { get; set; }
-        public string Link { get; set; }
     }
 }

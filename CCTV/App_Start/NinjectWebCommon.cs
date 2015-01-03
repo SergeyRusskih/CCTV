@@ -65,6 +65,8 @@ namespace CCTV.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IMainMenu>().To<MainMenuImitation>();
+            kernel.Bind<ICamera>().To<IpCamImitations>();
+            kernel.Bind<IInvestProjects>().To<InvestProjectsImitation>();
         }        
     }
 }

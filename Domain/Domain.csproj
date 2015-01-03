@@ -62,8 +62,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICamera.cs" />
+    <Compile Include="Abstract\IInvestProjects.cs" />
     <Compile Include="Abstract\IMainMenu.cs" />
+    <Compile Include="Entities\InvestProject.cs" />
+    <Compile Include="Entities\IpCam.cs" />
     <Compile Include="Entities\MenuItem.cs" />
+    <Compile Include="Imitations\InvestProjectsImitation.cs" />
+    <Compile Include="Imitations\IpCamImitations.cs" />
     <Compile Include="Imitations\MainMenuImitation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

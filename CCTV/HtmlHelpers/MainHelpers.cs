@@ -22,7 +22,7 @@ namespace CCTV.HtmlHelpers
                 {
 
                     TagBuilder a = new TagBuilder("a");
-                    a.Attributes.Add("href", "/");
+                    a.Attributes.Add("href", menu[i].Link);
                     a.InnerHtml = menu[i].Name;
                     //tag.InnerHtml = mainMenu[i].Name.ToSting();
                     TagBuilder li = new TagBuilder("li");

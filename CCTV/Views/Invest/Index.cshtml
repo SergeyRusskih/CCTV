@@ -1,0 +1,15 @@
+﻿@model IQueryable<Domain.Entities.InvestProject>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    foreach (var project in Model)
+    {
+        <p>@project.Name</p><br />
+        <p>@project.Title</p><br />
+        <a href="invest/video/@project.Id">@project.Name</a>
+    }
+}
+
