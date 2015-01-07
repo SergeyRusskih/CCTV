@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (!ViewBag.IsRunning)
+{
+    using (Html.BeginForm("Start", "Video"))
+    {
+        <text>
+            <input type="submit" value="Начать показ" />
+        </text>
+    }
+}
+else
+{
+    using (Html.BeginForm("Stop", "Video"))
+    {
+
+        <text>
+            <input type="submit" value="Остановить показ" />
+            <br />
+            <img src="@Url.Action("Video")" />
+
+        </text>
+
+    }
+}
+

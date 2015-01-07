@@ -1,15 +1,47 @@
-﻿@model IQueryable<Domain.Entities.InvestProject>
+﻿@model IEnumerable<Domain.Entities.Project>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@{
-    foreach (var project in Model)
-    {
-        <p>@project.Name</p><br />
-        <p>@project.Title</p><br />
-        <a href="invest/video/@project.Id">@project.Name</a>
-    }
-}
+    <div class="container">
+        
+        <a class="btn btn-default" href="invest/add" role="button">Добавить проект</a>
+        <br/><br />
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Название</th>
+                        <th>Краткое описание</th>
+                        <th>Число ip - камер</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        @foreach (var item in Model)
+                            {
+                                <td>@item.Id
+                                <td />
+                                <td>@item.Name
+                                <td />
+                                <td>@item.Descr</td>
+                                <td></td>
+                                <td>Удалить</td>
+                                <td>Изменить</td>
+                                }
+                            }
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 

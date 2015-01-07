@@ -5,11 +5,10 @@ using System.Web;
 
 namespace Domain.Entities
 {
-    public class InvestProject
+    public class Project
     {
         public int Id { get; set; }
-        public int CamId { get; set; }
-        public string Title { get; set; }
         public string Name { get; set; }
+        public string Descr { get; set; }
     }
 }

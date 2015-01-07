@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -63,17 +69,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\ICamera.cs" />
-    <Compile Include="Abstract\IInvestProjects.cs" />
+    <Compile Include="Abstract\IProjects.cs" />
     <Compile Include="Abstract\IMainMenu.cs" />
-    <Compile Include="Entities\InvestProject.cs" />
+    <Compile Include="Concrete\EFDbContext.cs" />
+    <Compile Include="Concrete\EFProjectRepository.cs" />
+    <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\IpCam.cs" />
     <Compile Include="Entities\MenuItem.cs" />
-    <Compile Include="Imitations\InvestProjectsImitation.cs" />
     <Compile Include="Imitations\IpCamImitations.cs" />
     <Compile Include="Imitations\MainMenuImitation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

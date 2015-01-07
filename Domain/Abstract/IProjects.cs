@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Abstract
 {
-    public interface IInvestProjects
+    public interface IProjects
     {
-        IQueryable<InvestProject> InvestProjects { get; }
+        IQueryable<Project> Projects { get; }
     }
 }

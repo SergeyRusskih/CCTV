@@ -13,6 +13,7 @@ namespace CCTV.App_Start
 
     using Domain.Abstract;
     using Domain.Imitations;
+    using Domain.Concrete;
 
     public static class NinjectWebCommon 
     {
@@ -66,7 +67,7 @@ namespace CCTV.App_Start
         {
             kernel.Bind<IMainMenu>().To<MainMenuImitation>();
             kernel.Bind<ICamera>().To<IpCamImitations>();
-            kernel.Bind<IInvestProjects>().To<InvestProjectsImitation>();
+            kernel.Bind<IProjects>().To<EFProjectRepository>();
         }        
     }
 }
