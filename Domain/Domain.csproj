@@ -71,13 +71,12 @@
     <Compile Include="Abstract\ICamera.cs" />
     <Compile Include="Abstract\IProjects.cs" />
     <Compile Include="Abstract\IMainMenu.cs" />
-    <Compile Include="Concrete\EFDbContext.cs" />
-    <Compile Include="Concrete\EFProjectRepository.cs" />
+    <Compile Include="Context\CCTVContext.cs" />
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\IpCam.cs" />
     <Compile Include="Entities\MenuItem.cs" />
-    <Compile Include="Imitations\IpCamImitations.cs" />
     <Compile Include="Imitations\MainMenuImitation.cs" />
+    <Compile Include="Initializir\CCTVContextInitializir.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

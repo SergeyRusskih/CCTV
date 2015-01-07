@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Domain.Context;
+using Domain.Initializir;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -16,6 +19,8 @@ namespace CCTV
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<CCTVContext>(new CCTVContextInitializir());
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

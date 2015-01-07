@@ -13,9 +13,8 @@ namespace Domain.Imitations
         {
             get {
                 return (new List<MenuItem> {
-                    new MenuItem { Id = 9, Name = "Главная",Link = "/home",  ParentId = null, CurrentPage = false },
-                    new MenuItem { Id = 9, Name = "Инвестпроекты",Link = "/invest",  ParentId = null, CurrentPage = false },
-                    new MenuItem { Id = 9, Name = "Администрирование",Link = "/admin",  ParentId = null, CurrentPage = false },
+                    new MenuItem { Id = 1, Name = "Главная",Link = "/Home",  ParentId = null, CurrentPage = false },
+                    new MenuItem { Id = 2, Name = "Инвестпроекты",Link = "/Invest",  ParentId = null, CurrentPage = false }
                 }).AsQueryable();
             }
 

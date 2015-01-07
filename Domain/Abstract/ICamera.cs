@@ -9,6 +9,6 @@ namespace Domain.Abstract
 {
     public interface ICamera
     {
-        IQueryable<IpCam> Items { get; }
+        IQueryable<IpCam> IpCams { get; }
     }
 }

@@ -18,7 +18,7 @@ namespace CCTV.Controllers
 
         private static MJPEGStream videoMJPEGSource;
 
-        private static JPEGStream videoJPEGSource;
+        //private static JPEGStream videoJPEGSource;
 
         //
         // GET: /Home/

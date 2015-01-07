@@ -1,0 +1,48 @@
+﻿@model Domain.Entities.Project
+
+@{
+    ViewBag.Title = "Удаление проекта";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Удаление проекта</h2>
+
+    <h3>Вы уверены, что хотите удалить этот проект?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Descr)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Descr)
+            </dd>
+            <dt>
+                Число ip - камер
+            </dt>
+            <dd>
+                @Model.IpCams.Count()
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Удалить" class="btn btn-default" /> |
+                @Html.ActionLink("К списку проектов", "Index")
+            </div>
+        }
+    </div>
+</div>
