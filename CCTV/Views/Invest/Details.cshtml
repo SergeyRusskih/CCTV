@@ -32,11 +32,19 @@
             <dd>
                 @Model.IpCams.Count()
             </dd>
-
         </dl>
+        <p>
+            @Html.ActionLink("Редактировать", "Edit", new { id = Model.ProjectID }) |
+            @Html.ActionLink("К списку проeктов", "Index")
+        </p>
     </div>
-    <p>
-        @Html.ActionLink("Редактировать", "Edit", new { id = Model.ProjectID }) |
-        @Html.ActionLink("К списку проeктов", "Index")
-    </p>
+    @foreach (var cam in Model.IpCams)
+    {
+        <div class="ip-cam">
+            <p>@cam.Name</p>
+            <img src="../Video?address=@cam.Address" />
+        </div>
+
+    }
+
 </div>

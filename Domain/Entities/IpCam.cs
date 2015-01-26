@@ -13,12 +13,21 @@ namespace Domain.Entities
         [Required(ErrorMessage = "Поле {0} обязательно для заполнения")]
         [Display(Name = "Ip адрес")]
         [DataType(DataType.Text)]
-        public String Adress { get; set; }
+        public String Address { get; set; }
 
         [Required(ErrorMessage = "Поле {0} обязательно для заполнения")]
         [Display(Name = "Название")]
         [DataType(DataType.Text)]
         public String Name { get; set; }
+
+        [Display(Name = "Параметры")]
+        [DataType(DataType.Text)]
+        public String Param { get; set; }
+
+        [Required(ErrorMessage = "Поле {0} обязательно для заполнения")]
+        [Display(Name = "Тип камеры")]
+        [DataType(DataType.Text)]
+        public String TypeCam { get; set; }
 
         public Int32 ProjectID { get; set; }
 

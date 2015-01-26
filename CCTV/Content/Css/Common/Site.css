@@ -1,1 +1,9 @@
-﻿
+﻿.ip-cam {
+    float: left;
+    margin: 20px;
+}
+
+.container img {
+    height: 300px;
+    width: 450px;
+}

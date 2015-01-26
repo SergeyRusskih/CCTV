@@ -14,45 +14,29 @@ namespace Domain.Initializir
         {
             var ipCams = new List<IpCam>
             {
-                new IpCam { Name = "af", Adress = "adf" },
-                new IpCam { Name = "af", Adress = "adf" },
-                new IpCam { Name = "af", Adress = "adf" },
-                new IpCam { Name = "af", Adress = "adf" },
-                new IpCam { Name = "af", Adress = "adf" },
-                new IpCam { Name = "af", Adress = "adf" },
-                new IpCam { Name = "af", Adress = "adf" },
+                new IpCam { 
+                    Name = "First cam", 
+                    Address = "128.197.178.101", 
+                    Param = "",  
+                    TypeCam = "axis",
+                },
+                new IpCam {
+                    Name = "Second cam",
+                    Address = "148.61.63.218",
+                    Param = "",
+                    TypeCam = "axis"
+                },
+                //new IpCam { Name = "Second cam", Address = "193.138.213.160/CgiStart?page=Single&Mode=Motion&Language=9" }
             };
 
             context.Projects.Add(
                 new Project()
                 {
-                    ProjectID = 1,
                     Name = "First project",
                     Descr = "My first project",
                     IpCams = ipCams
 
-                });
-            //context.IpCams.Add(
-            //    new IpCam() { Name = "First IpCam",
-            //                  Adress = "http://148.61.63.218/view/viewer_index.shtml?id=402",
-            //                  Project = context.Projects.Add(
-            //                     new Project() {
-            //                         Name = "First project",
-            //                         Descr = "It's my fitrst project"
-            //                     })
-            //});
-            //context.IpCams.Add(
-            //    new IpCam()
-            //    {
-            //        Name = "Second IpCam",
-            //        Adress = "http://148.61.63.218/view/viewer_index.shtml?id=402",
-            //        Project = context.Projects.Add(
-            //           new Project()
-            //           {
-            //               Name = "First project",
-            //               Descr = "It's my fitrst project"
-            //           })
-            //    });
+            });
 
             context.SaveChanges();
         }
